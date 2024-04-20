@@ -3,6 +3,7 @@ library(randomForest)
 library(tidyr)
 library(ggplot2)
 library(ggcorrplot)
+library(rsconnect)
 
 boston <- "HousingData.csv"
 dfBoston <- readr::read_csv(boston)

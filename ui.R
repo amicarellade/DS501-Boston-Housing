@@ -51,7 +51,7 @@ fluidPage(
                  known to rent/buy a home that is in my best pricing interest."),
                h5("In this project, I extract and manipulate the data in order to create regression model
                   to predict the MEDV - Median value of owner-occupied homes in $1000's."),
-               tags$img(src = 'Boston.jpg', height = "600px", width = "600px", alt = "Image of Boston skyline"),
+               tags$img(src = '/Boston.jpg', height = "600px", width = "600px", alt = "Image of Boston skyline"),
                ),
       tabPanel("Exploration",
                h2("Step 1: Data Understanding"),

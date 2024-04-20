@@ -4,11 +4,8 @@ library(tidyr)
 library(ggplot2)
 library(ggcorrplot)
 
-boston <- "/Users/danteamicarella/Downloads/HousingData.csv"
+boston <- "HousingData.csv"
 dfBoston <- readr::read_csv(boston)
-rf_model <- readRDS("/Users/danteamicarella/rf_model.rds")
-
-# https://www.kaggle.com/code/panagiotisprassas/eda-linear-regression-ml
 
 # Define server logic required to draw a histogram
 server <- function(input, output) {

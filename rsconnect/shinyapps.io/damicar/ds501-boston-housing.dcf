@@ -1,0 +1,10 @@
+name: ds501-boston-housing
+title:
+username: damicar
+account: damicar
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 11816855
+bundleId: 8519522
+url: https://damicar.shinyapps.io/ds501-boston-housing/
+version: 1

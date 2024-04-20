@@ -8,7 +8,7 @@ library(dplyr)
 library(randomForest)
 
 # Boston Housing Dataset
-boston <- "/Users/danteamicarella/Downloads/HousingData.csv"
+boston <- "HousingData.csv"
 dfBoston <- readr::read_csv(boston)
 
 head(dfBoston)

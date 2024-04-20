@@ -9,8 +9,6 @@
 
 library(shiny)
 library(randomForest)
-library(MASS)
-
 
 # Define UI for application that draws a histogram
 fluidPage(
@@ -50,8 +48,7 @@ fluidPage(
                  dataset I wanted to extract insights from the housing market that are not previously
                  known to rent/buy a home that is in my best pricing interest."),
                h5("In this project, I extract and manipulate the data in order to create regression model
-                  to predict the MEDV - Median value of owner-occupied homes in $1000's."),
-               tags$img(src = '/images/Boston.jpg', height = "300px", width = "600px", alt = "Image of Boston skyline"),
+                  to predict the MEDV - Median value of owner-occupied homes in $1000's.")
                ),
       tabPanel("Exploration",
                h2("Step 1: Data Understanding"),

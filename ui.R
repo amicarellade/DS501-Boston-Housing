@@ -38,8 +38,8 @@ fluidPage(
     p(''),
     p('This app allows the exploration of the following:'),
     p('(1) Explore the context of the project.'),
-    p('(2) Understand the data preparation of the project.'),
-    p('(3) Analyze the mathemical/statistical background of the project.'),
+    p('(2) Analyze the data preparation of the project.'),
+    p('(3) Understand the mathemical/statistical background of the project.'),
     p('(4) Demonstrate the model.'),
     tabsetPanel(
       tabPanel("Project Overview",
@@ -51,7 +51,7 @@ fluidPage(
                  known to rent/buy a home that is in my best pricing interest."),
                h5("In this project, I extract and manipulate the data in order to create regression model
                   to predict the MEDV - Median value of owner-occupied homes in $1000's."),
-               tags$img(src = '/Boston.jpg', height = "600px", width = "600px", alt = "Image of Boston skyline"),
+               tags$img(src = '/images/Boston.jpg', height = "300px", width = "600px", alt = "Image of Boston skyline"),
                ),
       tabPanel("Exploration",
                h2("Step 1: Data Understanding"),
@@ -89,8 +89,47 @@ fluidPage(
                  large or small values.")),
       tabPanel("Math Background",
                h2("Understanding Random Forrest Regression"),
-               h3("Decision Trees"),
-               p("")),
+               h3("Ensemble Learning"),
+               p("What is ensemble learning? Ensemble learning is a machine learning technique that enhances accuracy in forecasting
+                 by merging predictions from multiple models or algorithms. There are three types of ensemble learning: boosting, bagging, and stacking.
+                 Ensmeble learnign aims to mitigate errors or bias in the data by leveraging the overall 'intellignece' of the ensemble of the data. Due 
+                 to its robustness, ensemble learning is commonly practiced throughout the machine learning world."),
+               h3("Bootstrapping"),
+               p("Bootsrapping is a resampling technique used to estimate the sampling distribution of a statistic by repeatedly sampling with 
+                 replacement from the original dataset. In the context of ML and random forrest, bootstrapping is used to create multiple subsets of the 
+                 original training data, each of which is used to train a separate decision tree. For each bootstrap sample, a decision tree is trained 
+                 using the CART (Classification and Regression Trees) algorithm. However, at each node of the tree, instead of considering all features 
+                 for splitting, a random subset of features (typically sqrt(p), where p is the total number of features) is considered. This introduces 
+                 additional randomness and diversity into the trees. The probability of an observation being selected in each bootstrap sample is approximately 1 - (1/n) with n
+                 being the observations. This process is repeated multiple times to create multiple bootstrap samples."),
+               h3("Decision Tree"),
+               p("'A decision tree is a non-parametric supervised learning algorithm, which is utilized for [regression] tasks' (IBM, 2024).
+                 A decision tree is a hierarchical structure starting with a root node which has no parent branches and has branches feeding into the child nodes, also known
+                 as decision nodes. Each node represent a decision based on a feature in the dataset, and each leaf node represent the output (numerical value
+                 in our case since we are using regression). At each internal node of the tree, the algorithm selects the best feature to split the dataset. The process
+                 of splitting the tree based on the best feature is called mean squared regression. The splitting process continues recursively for each subset
+                 until one of the stopping critera is met, such as reaching a maximum tree depth or having a minimum number of samples in a node. In the end,
+                 the predicted output for the instance is the mean value of the training instances in the leaf node."),
+               h3("Mean Squared Error (MSE)"),
+               p("MSE measures the average squared difference between the actual values and the predicted values obtained from a regression model. 
+                 Features that result in lower MSE values are considered more informative or predictive. Oftentime, the combination of multiple features
+                 may result in a lower MSE than using a standalone feature. To prevent a model such as random forrest from overfitting, regularization
+                 techniques can be used to penalize the model for using additional features. MSE is calculated as: https://en.wikipedia.org/wiki/Mean_squared_error. 
+                 "),
+               h3("Random Forrest Regression"),
+               p("Random Forest regression begins by creating multiple bootstrap samples from the original dataset. Each bootstrap sample is created by 
+               randomly selecting observations from the original dataset with replacement. This results in multiple subsets of the original data, each of 
+                 which is used to train a separate decision tree. For each bootstrap sample, a decision tree is grown using the CART algorithm. However, 
+                 at each node of the tree, instead of considering all features for splitting, a random subset of features is considered. This introduces 
+                 additional randomness and diversity into the trees. Each decision tree is trained independently and does not have access to the entire dataset.
+                 During training, each decision tree is optimized to minimize the mean squared error (MSE) of the predictions on its training data. 
+                 The MSE measures the average squared difference between the actual target values and the predicted values.
+                  Once all decision trees are trained, predictions are made for each observation in the original dataset using each individual tree. 
+                 For regression tasks, the final prediction is typically the average of the predictions from all trees (ensemble averaging). 
+                 By aggregating the predictions from multiple trees, Random Forest regression reduces the variance of the predictions and improves the overall model performance.
+                  Once all decision trees are trained, predictions are made for each observation in the original dataset using each individual tree. For regression tasks, 
+                 the final prediction is typically the average of the predictions from all trees (ensemble averaging). By aggregating the predictions from multiple trees, 
+                 Random Forest regression reduces the variance of the predictions and improves the overall model performance.")),
       tabPanel("Model",
                h2("Random Forest Model Evaluation"),
                h5("To test the model, select the features you want to use in the sidepar panel and hit the 'Train Model'

@@ -1,5 +1,8 @@
-# Case Study 3: DS 501
+# Final Project: DS 501
 
-This project explores the Boston Housing dataset and employs a random forrest regression model to predict MEDV.
+## Dante Amicarella
 
-My project can be accessed here: https://damicar.shinyapps.io/DS501-Boston-Housing/
+In this I expplored the Boston Housing dataset and employ a Shiny application to demonstrate a random forrest regression model to predict MEDV.
+
+## Links
+Project Website: https://damicar.shinyapps.io/DS501-Boston-Housing/

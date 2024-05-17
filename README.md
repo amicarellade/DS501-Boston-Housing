@@ -1,4 +1,4 @@
-# Final Project: DS 501
+# Boston Housing Pricing Prediction
 
 ## Dante Amicarella
 

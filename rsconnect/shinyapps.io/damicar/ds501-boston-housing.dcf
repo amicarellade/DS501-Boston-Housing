@@ -5,7 +5,7 @@ account: damicar
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 11817000
-bundleId: 8521736
+bundleId: 8625668
 url: https://damicar.shinyapps.io/DS501-Boston-Housing/
 version: 1
 asMultiple: FALSE

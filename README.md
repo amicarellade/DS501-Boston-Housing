@@ -1,7 +1,5 @@
 # Boston Housing Pricing Prediction
 
-## Dante Amicarella
-
 In this project I explored the Boston Housing dataset and employ a Shiny application to demonstrate a random forrest regression model to predict MEDV. I demonstrate visualizations to represent the data exploration I performed and provided an in-depth explanation to what random forrest regression is.
 
 ## Links
